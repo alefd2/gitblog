@@ -1,11 +1,12 @@
-import { PostContentCardContainer, PostDetailsContainer } from './styles'
-import ReactMarkdown from 'react-markdown'
-import { PostsProps } from '../../Home'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import { PostsProps } from "../../Home";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { PostContentCardContainer, PostDetailsContainer } from "./styles";
 
 interface PostContentProps {
-  data: PostsProps
+  data: PostsProps;
 }
 
 export function PostContentCard({ data }: PostContentProps) {
@@ -19,5 +20,5 @@ export function PostContentCard({ data }: PostContentProps) {
         )}
       </PostDetailsContainer>
     </PostContentCardContainer>
-  )
+  );
 }

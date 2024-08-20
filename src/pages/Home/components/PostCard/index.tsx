@@ -9,11 +9,6 @@ interface PostCardProps {
 }
 
 export function PostCard({ data }: PostCardProps) {
-  const maximumCharacters = data.body.length > 182;
-  if (maximumCharacters) {
-    data.body = data.body.substring(0, 182) + "...";
-  }
-
   const navigate = useNavigate();
 
   function handleCompletePost() {

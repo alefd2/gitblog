@@ -1,44 +1,20 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const PostCardContainer = styled.main`
   display: flex;
   flex-direction: column;
-
-  width: 41.6rem;
-
-  background-color: ${(props) => props.theme['base-post']};
-
-  padding: 3.2rem;
-
+  width: 41rem;
+  background-color: ${(props) => props.theme["base-post"]};
+  padding: 3rem;
   border-radius: 1rem;
+  transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  justify-content: space-between;
 
   &:hover {
-    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
-      both;
-    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    border: 2px solid ${(props) => props.theme['base-label']};
+    background-color: ${(props) => props.theme["base-post"]};
     cursor: pointer;
-  }
-
-  @-webkit-keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-    100% {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-  }
-  @keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-    100% {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.3);
   }
 `
 
@@ -46,16 +22,17 @@ export const Title = styled.div`
   display: flex;
   margin-bottom: 2rem;
   line-height: 3.2rem;
+  justify-content: space-between;
 
   h3 {
-    max-width: 27.7rem;
+    max-width: 27rem;
     font-size: 2rem;
-    color: ${(props) => props.theme['base-title']};
+    color: ${(props) => props.theme["base-title"]};
   }
 
   span {
-    color: ${(props) => props.theme['base-span']};
-    font-size: 1.4rem;
+    color: ${(props) => props.theme["base-span"]};
+    font-size: 0.8rem;
     width: 7.5rem;
     text-align: right;
   }
@@ -68,5 +45,5 @@ export const Description = styled.div`
   line-height: 2.7rem;
 
   overflow: auto;
-  overflow: overlay;
+  overflow-y: hidden;
 `
